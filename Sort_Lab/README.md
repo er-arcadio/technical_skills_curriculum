@@ -117,9 +117,32 @@ You have heavy machinery to help you do these things, but the machinery costs mo
 - Hold the 50th train car using the `hold(idx)` function and print the `forklift` variable to show that car.
 
 **Medium**
-- Use any one of the sorting algorithms you've already used to sort the `train_cars` using only these 4 functions. _HINT: use lots of print statements to see what's happening_
-- 
+- Use any one of the sorting algorithms you've already used to sort the `train_cars` using only the 4 functions in the file. _HINT: use lots of print statements to see what's happening_
+- Notice how each function has the line `total_cost += 0`. Add a cost of $100 to each function. Then, run your sort and see how much money it costs.
+
+**Spicy**
+
+- Change the costs to the following 4 scenarios, and write a new sorting function that minimizes cost. Compare with your other functions. ALSO: give yourself a `floor_space`, 1 variable that can hold a train car while your `forklift` is moving another. 
+
+1. Moving the forklift costs gas and time both of which is on a surge:
+    - Weigh = $100
+    - Hold = $200
+    - Insert = $200
+    - Shift = $100
+
+2. The scale is new technology. The new technology is pricy! At least gas prices are down.
+    - Weigh = $400
+    - Hold = $75
+    - Insert = $75
+    - Shift = $50
+
+3. We need to hire more people to help shift the cars because our forklift no longer can do that:
+    - Weigh = $200
+    - Hold = $150
+    - Insert = $150
+    - Shift = $400
 
 ## Hints & Resources
 
-?
+- Use the [Sort the Cards](https://sortinggame.emmanuelrodri23.repl.co/) app to help visualize things when they get too hard to conceptualize.
+- With the train cars, you can look up these "in-place" sorting algorithms to help you get started. In order from east to hard: bubble sort, selection sort, insertion sort, and quicksort sort.

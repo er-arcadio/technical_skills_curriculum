@@ -1,6 +1,7 @@
 from sample_data import train_cars
 
 forklift = None
+floor_space = None
 total_cost = 0
 
 # weighs the car at given index; returns None if empty
@@ -39,4 +40,5 @@ def shift(idx, shifts=1):
 
 
 # Your Code Here!
+length_trains = len(train_cars)
 
