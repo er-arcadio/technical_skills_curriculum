@@ -2,7 +2,7 @@ const N = 11; // number of cards to sort
 const visibleNumbers = [];
 let selectedCard = null;
 let cycleTracker = {};
-const $switch = document.querySelector('#switch')
+const $switch = document.querySelector("#switch");
 
 // Create click and drag
 const handleClick = (e) => {
@@ -69,6 +69,7 @@ const newEmpty = () => {
 // Create starting random numbers
 const resetGame = (numOfCards = N, rangeOfValues = 1000) => {
   document.querySelector("#check-final").disabled = false;
+
   const $mainGrid = document.querySelector(".mainGrid");
   const $holdBoxes = document.querySelector("#hold-boxes");
   $mainGrid.innerHTML = "";
@@ -99,6 +100,10 @@ const resetGame = (numOfCards = N, rangeOfValues = 1000) => {
   for (let i = 0; i < bucketsCount; i++) {
     $holdBoxes.appendChild(newEmpty());
   }
+
+  const parent = document.querySelector("#final");
+  const child = document.querySelector("h1.subtitle");
+  child ? parent.removeChild(child) : null
 };
 
 resetGame();
@@ -107,12 +112,10 @@ resetGame();
 document.querySelector("#reset").addEventListener("click", () => resetGame());
 
 // large bucket check box
-document
-  .querySelector("#add-bucks")
-  .addEventListener("change", () => {
-    resetGame()
-    $switch.classList.toggle('hide')
-  });
+document.querySelector("#add-bucks").addEventListener("change", () => {
+  resetGame();
+  $switch.classList.toggle("hide");
+});
 
 const getGrade = (id) => {
   const $grade = document.querySelector(id);
@@ -145,34 +148,46 @@ document.querySelector("#check-final").addEventListener("click", (e) => {
     cardsOutOfOrder.forEach(($card) => {
       $card.style.color = "red";
     });
-    if(cardsOutOfOrder.length === N) {
+    if (cardsOutOfOrder.length === N) {
       e.target.disabled = false;
-      finalScore = 0
-      alert("Be sure to swap your cards to the top row for final scoring. If they are, make sure they are sorted in ASCENDING order.")
+      finalScore = 0;
+      alert(
+        "Be sure to swap your cards to the top row for final scoring. If they are, make sure they are sorted in ASCENDING order."
+      );
     }
   } else {
     finalScore =
       2 * getGrade("#obs") +
       8 * getGrade("#cyc") +
       1 * getGrade("#mvs") +
-      (getGrade("#bku") === 11? 1:0);
+      (getGrade("#bku") === 11 ? 1 : 0);
   }
-  document.querySelector("#fin").innerHTML = finalScore;
+  // document.querySelector("#fin").innerHTML = finalScore;
+  console.log("Final Score: ", finalScore);
+  const result = document.createElement("h1");
+  const parent = document.querySelector("#final");
+  parent.appendChild(result);
+  result.classList.add("subtitle");
+  if (finalScore === "∞") {
+    result.innerHTML = "Not sorted";
+  } else if(finalScore != 0) {
+    result.innerHTML = "Sorted!";
+  }
 });
 
-$switch.addEventListener('click', (e)=>{
-  $mainGrid = document.querySelector('.mainGrid')
-  $holdBoxes = document.querySelector('#hold-boxes')
-  mainClone = Array.from($mainGrid.children)
-  holdClone = Array.from($holdBoxes.children)
-  $mainGrid.innerHTML=''
-  $holdBoxes.innerHTML=''
-  holdClone.forEach(child=>{
-    child.addEventListener('click', handleClick)
-    $mainGrid.appendChild(child)
-  })
-  mainClone.forEach(child=>{
-    child.addEventListener('click', handleClick)
-    $holdBoxes.append(child)
-  })
-})
+$switch.addEventListener("click", (e) => {
+  $mainGrid = document.querySelector(".mainGrid");
+  $holdBoxes = document.querySelector("#hold-boxes");
+  mainClone = Array.from($mainGrid.children);
+  holdClone = Array.from($holdBoxes.children);
+  $mainGrid.innerHTML = "";
+  $holdBoxes.innerHTML = "";
+  holdClone.forEach((child) => {
+    child.addEventListener("click", handleClick);
+    $mainGrid.appendChild(child);
+  });
+  mainClone.forEach((child) => {
+    child.addEventListener("click", handleClick);
+    $holdBoxes.append(child);
+  });
+});
