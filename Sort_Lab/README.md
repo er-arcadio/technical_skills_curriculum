@@ -1,4 +1,4 @@
-# TITLE
+# Sorting Lab
 
 [![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
 
@@ -6,8 +6,7 @@
 
 - [Intro](#intro)
 - [The Lab](#the-lab)
-- [Hints & Resources](#hints--resources)
-- [Extensions](#extensions)
+- [Hints & Resources](#resources)
 
 ## Intro
 
@@ -17,53 +16,30 @@ In the lab, you will be asked to code up your algorithms and make new plans for 
 
 ## The Lab
 
-> Note: First, we'll be demoing Selection Sort, and how to turn the idea into code. Then, we will guide students in doing the same for Insertion sort and one of the algorithms they made in the lesson (if applicable). 
+> Note: There are many built in sorting algorithms that exist in many programming languages. While these are tools you can (and should!) use when programming, you should **NOT** use them for today's lab. 
 
-**Coding Selection Sort**
-1. Explain selection sort to students. The idea behind Selection Sort is to look for the smallest number and place it in the first slot. Then, look for the next smallest and put it in the second slot, and so on until the list is sorted. 
-2. Have students try this method for about a minute in the "Sort the Cards" app before showing them the code.
-    ```py
-    sample_list = [5, 2, 1, 3, 4]
-    sorted_list = []
+### Sorting Algorithms
 
-    for i in range(len(sample_list)):
-        smallest = sample_list[0]
-        for element in sample_list:
-            if element < smallest:
-                smallest = element
-        sorted_list.append(sample_list.pop(smallest))
+Two sets of sample data have been provided in the `sample_data.py` file. Write all your code in the `sort_lab.py` file.
+
+If you don't remember a particular sorting algorithm, explore the documentation on [Sorting and Searching Algorithms](https://www.programiz.com/dsa/bubble-sort)
+
+1. Create an algorithm that does an insertion sort of the sample `numbers` list from smallest to largest.
+2. Create an algorithm that does an bubble sort of the sample `numbers` list from smallest to largest.
+3. Create an algorithm that does a selection sort of the sample `numbers` list from smallest to largest
+4. Pause and discuss. Which algorithm is the most "efficient"? Explain your answer considering how each handles:
+    - Number of observations
+    - Number of iterations/cycles
+    - Number of movements of items
+5. **Spicy**: Update your three algorithms to sort values in `numbers` from largest to smallest.
+6. **Spicier**: Update your three algorithms to sort the list of `student` dictionaries by a provided key (name, age, or occupation).
+    ```python
+    sort(sample_data.students, "occupation") 
+    # returns list sorted based on their occupation
     ```
-    _NOTE: we know this is not the most efficient "in-place" way of selection sorting, but it is easy to read, and used as an example of mind to code._
-3. Have students turn and talk to their partner explaining to each other what is happening here step by step. 
-4. Now, explain Insertion Sort using the "Sort the Cards" app; The idea behind Insertion Sort is that you look at the next element in the list, pluck it out, and shift the previous elements that are greater than the plucked out element. Then, insert the element back into the list at the right spot.
+7. Create a merge sort algorithm to sort the list of `numbers`.
+8. Create a merge sort algorithm to sort the list of student dictionaries by a provided key (name, age, or occupation).
 
-5. Fork; At this point, consider forking the class.
-    - With the students that feel ready, they can start the extensions -- the first being to code Insertion Sort. 
-    - For those that would like extra assistance, you can go back and explain Selection Sort more in depth and/or guide them through the first few steps of Insertion Sort. 
-    
-    If you feel your class overall will need extra support after coding Insertion sort, consider having students return after attempting Insertion Sort for a show and tell.
-
-```py
-# One way to code Insertion Sort
-sample_list = [5, 2, 1, 3, 4]
-
-for i in range(1, len(sample_list)):
-    this_value = sample_list[i]
-
-    pointer = i-1
-    while pointer >= 0 and sample_list[pointer] > this_value:
-        sample_list[pointer+1] = sample_list[pointer]
-        pointer -= 1
-
-    sample_list[pointer+1] = this_value
-```
-
-## Hints & Resources
+## Resources
 
 - **Programiz**: [Sorting and Searching Algorithms](https://www.programiz.com/dsa/bubble-sort)
-
-## Extensions
-
-**Mild**
-- Discuss the steps for implementing Insertion Sort with your partner. Use the "Sort the Cards" app if you need to visualize. Then, code Insertion Sort. _HINT: print your list at each iteration to make sure it is sorting as expected_
-- Using the `students` dictionary in the `sample_data.py`, create a function that can sort it by age.
