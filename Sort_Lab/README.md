@@ -60,11 +60,10 @@ for i in range(1, len(sample_list)):
 
 ## Hints & Resources
 
-?
+- **Programiz**: [Sorting and Searching Algorithms](https://www.programiz.com/dsa/bubble-sort)
 
 ## Extensions
 
 **Mild**
 - Discuss the steps for implementing Insertion Sort with your partner. Use the "Sort the Cards" app if you need to visualize. Then, code Insertion Sort. _HINT: print your list at each iteration to make sure it is sorting as expected_
 - Using the `students` dictionary in the `sample_data.py`, create a function that can sort it by age.
-- 
