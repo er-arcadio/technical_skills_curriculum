@@ -1,3 +1,5 @@
+import random
+
 students = [
     {
         "name":"Tanya",
@@ -50,3 +52,9 @@ students = [
         "occupation": "Musician"
     }
 ]
+
+train_cars = [{
+    "id":random.randint(100000, 999999),
+    "weight":random.randint(100000, 350000),
+    "color": random.choice(["black", "silver", "grey", "bronze", "brown"])
+} for i in range(20)]

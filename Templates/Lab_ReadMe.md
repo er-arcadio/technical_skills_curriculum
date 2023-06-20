@@ -13,6 +13,6 @@
 
 ## The Lab
 
-## Hints & Resources
-
 ## Extensions
+
+## Hints & Resources

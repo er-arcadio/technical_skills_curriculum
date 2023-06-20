@@ -1,4 +1,4 @@
-# TITLE
+# Sorting Algorithms
 
 [![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
 
@@ -6,15 +6,15 @@
 
 ### Goal & Sequence
 
-The goal of this lesson is to have students explore algorithms and sorting techniques through a ["Sort the Cards" game app](https://sortinggame.emmanuelrodri23.repl.co/). There will be **no** coding in this session. It mostly consists of trial and error, formulating and documenting ideas and strategies, and demoing and articulating those ideas with fellow classmates. In addition, this lesson works best with little to no vocabulary or use of complex algorithms. See "Teaching Tips"
+The goal of this lesson is to have students explore algorithms and sorting techniques through a ["Sort the Cards" game app](https://sortinggame.emmanuelrodri23.repl.co/). The focus mostly consists of trial and error, formulating and documenting ideas and strategies, and demoing and articulating those ideas with fellow classmates.
 
-Once students begin to feel comfortable with creating and using an algorithm, a series of repeatable steps to get to a conclusion, they should attempt the Sort Lab which has them put their ideas into code and introduces more vocabulary.
+Towards the end of the lesson, students will have the opportunity to put some algorithms into code and introduce some vocabulary.
 
 ### Teaching Tips
 
-Students learn best when they internalize through exploration and discussion. Use this lesson as a map for how to guide students along this journey. This lesson works best with no coding and a minimal use of vocabulary. We prefer to use vocabulary to label a student's idea or to group together similarly brought up ideas. 
+Students learn best when they internalize through exploration and discussion. This lesson is designed intentionally to avoid vocabulary and code for the first half. As students begin to feel confident articulating their own algorithms, consider only then introducing the fundamental algorithms and allowing them to bring it to code on their own. 
 
-The rationale behind no code is that (A) the coding is much easier once the algorithm is internalized, and proof of this internalization can usually be seen when students start to articulate their thoughts out loud. (B) The most advanced sorting interview questions have students not memorizing algorithms, but being able to understand and bend them to optimize for a specific problem. This exploration is meant to facilitate that type of thinking. 
+Note: The most advanced sorting interview questions have students not memorizing algorithms, but being able to understand and bend them to optimize for a specific problem. This exploration is meant to facilitate that type of thinking.
 
 ### Representation
 
@@ -31,10 +31,9 @@ Here are some other algorithms you can use to start a discussion having students
 
 Students will be able to:
 
-- Generate sorting algorithms from scratch. 
-- Articulate how both their unorthodox and orthodox algorithms operate. 
+- Formulate and articulate their own sorting algorithms. 
 - Compare different algorithms explaining the benefits and drawbacks.
-- Create a plan to optimize and adjust algorithms to meet certain constraints.
+- Bring their algorithmic thinking to code.
 
 ## Launch
 
@@ -42,14 +41,15 @@ Start up the "Sort Cards" game and demo how it works -- the goal is to sort the 
 
 Once most of them have finished, ask if any of them had a repeatable strategy that they can explain to the class. Disregard vocabulary for now and commend each volunteer.
 
-Have them play again, this time focussing on a specific repeatable strategy. Be sure they ignore the numbers (observations, cycles, final grade, etc.) for now.
+Have them play again, this time focussing on a specific repeatable strategy. Be sure they ignore the counts (observations, cycles, etc.) for now.
 
 Finish off by giving several students the time and space to clearly articulate the strategy they came up with. Consider demoing a preview on your screen or allowing them to share theirs with the class. 
 
 ## Lesson Walkthrough
 
-> Note: the following lesson uses Insertion Sort, but Bubble or Selection Sort could work just as well. 
+> Note: The following lesson uses Insertion Sort and Selection Sort. However, Bubble, Selection, or Insertion Sort can each be interchanged at any point. 
 
+**Unplugged / No Code**
 - Use a student's algorithm, or the insertion sort algorithm to demo how students should now articulate their strategy on a document, paper, or other means. For example:
     ```markdown
     ** Manny's Sort ** (really just Insertion Sort)
@@ -61,32 +61,56 @@ Finish off by giving several students the time and space to clearly articulate t
     ```
     _Note: the goal is not to have it align to code, but to think algorithmically or in clear repeatable steps._
 
-- Demo how this would work and ask students to now pay attention to the 4 measurements: observations, cycles, etc. The new goal is to have these numbers be as low as possible, because these numbers represent a cost. 
+- After demoing this algorithm, ask students to now notice the 4 counts, observations, cycles, moves, and storage, and predict what they're counting. 
+    - Observations: number of times your are looking at a card
+    - Moves: moving a card from one spot to another
+    - Storage: number of empty slots available
+    - Cycles: (tricky) max number of times you've observed the same number.
 
-- Have students try again to sort the cards creating a strategy and articulating it to their partner. This time they should focus on 3 things.
-    1. What are the measurements counting?
-    2. What's a good strategy if the goal is to keep the left 2 numbers, observations and cycles, as low as possible?
-    3. Whats a good strategy if the goal is to keep "moves" as low as possible?
+- Have students try again to sort the cards while keeping these counts low. They should focus on creating a repeatable strategy and articulating it to their partner.
 
-    _Note: at this point, students should **not** be focussed on sorting completely every time, but instead coming up with a sound strategy_
+- When students return, allow them to share their algorithms with you and the class navigating as you drive to demo for all to see. 
 
-- Bring students back and facilitate a discussion on the 3 focus points above:
-    1. Observations count the number of times you look at a card, cycles, is number of times you need to double check a card 1 check of all cards is 1 cycle, 2 checks is 2 cycles, etc. Moves is number of times you move a card.
-    2. Keeping a low cycle/observation count will require some memorization or relative organizing before sorting (as in the merge sort algorithm)
-    3. Keeping a low move count will require lots of observations. You can find the lowest number and put it in the right place, then the next lowest, etc. (Selection sort)
+**Incorporating Code**
 
-- Last, if the students had come up with an algorithm that already exists. Expose the vocabulary term for it. Here are ones that likely will come up from most to least likely: insertion, selection, bubble, radix, merge, or quick sort.
+- Now, flip the script and have another student drive as you navigate them through Selection Sort. For Selection Sort, look for the smallest number and place it in the first slot. Then, look for the next smallest and put it in the second slot, and so on until the list is sorted. _You can have them share their screen if on virtual or come up to the front of the class._ _NOTE: this is not going to be a low scoring algorithm, but it is a guaranteed simpler one to code out._
 
-> Note: At this point, if students feel comfortable articulating an algorithm, they should be ready to go right into the lab. Otherwise, use the extensions as more opportunities to get at bats at thinking algorithmically before doing so.
+- Ask students to try to code this algorithm in Python. Consider pairing off the students that are ready to go, and demoing the steps once more using the app, for students who would like to see it again. 
+
+- Once students return, have a couple of them explain their code to the class. Here's one way to do it:
+    ```python
+    def selection_sort(sample_list):
+        sorted_list = []
+
+        for i in range( len(sample_list) ):
+            smallest = sample_list[0]
+            for element in sample_list:
+                if element < smallest:
+                    smallest = element
+            sorted_list.append( sample_list.pop(smallest) )
+        
+        return sorted_list
+
+    print(selection_sort([5, 2, 1, 3, 4]))
+    ```
 
 ## Extensions
 
-- You may have noticed that "observations" and "cycles" are the most costly contributors to the "Final Grade". Come up with a strategy that minimizes these two measurements, write it down, and see if your partner can use it to come up with a low score.
-- Check the box "More Storage" at the top of the page. What strategy can you employ with this new resource to keep your measurements low?
-- [Spicy] Try to get a score below 100!
+- Try Selection sort without creating a new list!
+
+    HINT: You can use the following piece of code to swap two variables' values:
+
+    ```py
+    num1 = 4
+    num2 = 10
+    (num1, num2) = (num2, num1)
+    # num1 = 10
+    # num2 = 4
+    ```
+
+- Check out the algorithm for [Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA), and try to code it!  
 
 ## Extra Help & Resources
 
 - [Algorithm for tying shoes](https://madice99.wordpress.com/2016/09/07/algorithm-for-tying-your-shoes/)
-- [Algorithm for cleaning a pool](https://www.wikihow.com/Clean-Your-Own-Pool). Feel free to skim through this to get an idea of how verbose it can get.
-- [Bubble Sort](https://www.studytonight.com/data-structures/bubble-sort). Ignore the code for now. Notice the steps they outline.
+- [Selection Sort](https://www.youtube.com/watch?v=g-PGLbMth_g)
