@@ -6,7 +6,7 @@
 
 ### Goal & Sequence
 
-
+NOTE: This Lab is Incomplete.
 
 ### Teaching Tips (optional)
 
