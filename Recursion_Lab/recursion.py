@@ -3,11 +3,17 @@
 # 1. Write a function for the factorial of a number
 # ex. 3! = 3*2*1 = 6 -- 5! = 5*4*3*2*1 = 120
 
+
+
 # 2. Write a function that computes the sum of the digits of a number.
 # ex. 2148 => (2+1+4+8) = 15
 
+
+
 # 3. Write a function that reverses the order of a list.
 # ex. [1, 2, 3, 4, 5] => [5, 4, 3, 2, 1]
+
+
 
 
 # Medium
@@ -15,18 +21,22 @@
 # 4. Every number can be represented as a "single digit". Write a function that converts any number to it's "single digit" form
 # ex. 7 => 7 -- 57 (5+7) => 12 (1+2) => 3 -- 159 => 15 => 6
 
+
+
 # 5. Would you rather have a million dollars or a penny that doubles in size for a month (30 days)?
 # Write a function that finds how much a penny doubled for 30 days is.
 
-# 6. Is the number prime? Can it only be divided by itself and 1?
+
+
+# 6. Is the number prime? Can it only be divided by itself and 1? Write a function that determines whether or not a number is prime.
 # ex. 7 is prime (factors: 1, 7) but 10 is not (factors: 1, 2, 5, 10)
 # Hint: Check 2 first (by default) and work your way up until you hit the original number.
 
 
 
+
 # Spicy
 # NOTE: These are much easier as recursion than as a loop. Feel free to skip non-recursive version.
-
 
 # 7. A few chess players have made it to the finals fighting for 1st - 4th place.
 # Write a function that will return all the ways the players can get placed.

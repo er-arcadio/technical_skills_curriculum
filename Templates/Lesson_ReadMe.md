@@ -6,6 +6,13 @@
 
 ### Goal & Sequence
 
+...
+
+- [Launch](#launch)
+- [Lesson Walkthrough](#lesson-walkthrough)
+- [Extensions](#extensions)
+- [Close](#close)
+
 ### Teaching Tips (optional)
 
 ### Representation (optional)

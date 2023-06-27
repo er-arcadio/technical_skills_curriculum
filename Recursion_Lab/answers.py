@@ -49,6 +49,9 @@ def recursive_reverse(l):
     else:
         return [l[-1]] + recursive_reverse(l[:-1])
 
+
+
+
 # Medium
 
 # 4. Every number can be represented as a "single digit". Write a function that converts any number to it's "single digit" form
@@ -106,6 +109,9 @@ def recursive_prime(n, next_number=2):
     else:
         return recursive_prime(n, next_number + 1)
 
+
+
+
 # Spicy
 # NOTE: These are much easier as recursion than as a loop. Feel free to skip non-recursive version.
 
@@ -118,6 +124,8 @@ def recursive_prime(n, next_number=2):
 finalists = ['Sherman', 'Rosemary', 'Lucero', 'Yareli']
 
 
+
+
 # 8. Here's a list of all the chess students before the finals.
 # Write a function that finds all the combinations of last 4 finalists that could have ocurred. 
 # ex.   ['Raven', 'Dorian', 'Santiago', 'Marisol']
@@ -127,6 +135,8 @@ finalists = ['Sherman', 'Rosemary', 'Lucero', 'Yareli']
 #       ['Marisol', 'Raven', 'Santiago', 'Dorian']. It's the same 4 people.
 
 all_students = ['Raven', 'Dorian', 'Santiago', 'Marisol', 'Stephanie', 'Roland', 'Sherman', 'Rosemary', 'Lucero', 'Yareli']
+
+
 
 
 # 9. Raven has caught wind of a pop quiz coming up and wants to let everyone in the class know about it.

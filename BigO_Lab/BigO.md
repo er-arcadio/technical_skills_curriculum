@@ -11,7 +11,17 @@
 
 ## Intro
 
+
+
 ## The Lab
+
+**Maximum Sum**
+
+You have a list of numbers. How would you find the indexes of the 2 numbers that add up to the largest sum? Think of at least 2 ways to do this and code it.
+
+
+**Lists vs Dictionaries**
+
 
 ## Extensions
 
