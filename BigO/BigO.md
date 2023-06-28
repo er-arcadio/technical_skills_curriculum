@@ -15,23 +15,22 @@ The goal of this section is to have students start thinking about how fast or sl
 
 ### Teaching Tips
 
-Only prerequisite knowledge here is `lists`, `dictionaries`, `for loops`, and `binary search`. Some sorting algorithms are mentioned throughout, but the lesson mostly avoids coding and focusses on reading code, looking for specific indicators. For hands on coding, refer to the lab. 
+Only prerequisite knowledge here is `lists`, `dictionaries`, `for loops`, and `binary search`. The lesson mostly avoids coding and focusses on reading code, looking for specific indicators. For hands on coding, refer to the lab. 
 
 ### Learning Objectives
 
 Students will be able to:
 
 - Use Big O notation to describe time efficiency
-- Explain the relationship between code and how it effects Big O
-- Compare the efficiency of lists with dictionaries in Python
-- [Stretch] Understand hashing and how it improves time complexity
+- Explain the relationship between specific syntax and how it effects Big O
+
 
 ## Launch
 
 0. On binary search day, you learned that binary search was much better than linear search. On sorting day before that, you saw several ways to sort a list of numbers, and possibly had a chance to compare which were better and worse. 
     - Why is binary search better than linear search? By how much is better?
     - If you haven't already, checkout the ["Sort the Cards" game app](https://sortinggame.emmanuelrodri23.repl.co/) and pay specific attention to how the numbers at the top change. Which of these actions do you think takes the most time for a computer to go through?
-    - Recall some sorting algorithms that you discussed or coded previously. How do we know which one is better? And how much better are they?
+    - Recall some sorting algorithms that you discussed or coded previously. How could we possibly know which one is better? And how much better are they?
 
 ## Lesson Walkthrough
 
@@ -55,9 +54,49 @@ Students will be able to:
     print("My favorite number is", fav_num)
     ```
 
-5. There are 3 lines of code that will be run, but notice how no matter how big the list is, that number wont change. Because this number is consistent and not dependent, this is an **order of 1** or **O(1)** for short.
+5. There are 3 lines of code that will be run, and notice how no matter how big the list is, 3 lines is all that will run. Because this number is consistently 3 and not dependent on the list length, this is an **order of 1** or **O(1)** for short.
+    ```py
+    # Need more practice?
+    # Check out these examples and see if you can determine whether they are O(1) or O(n)
 
-6. That may seem a bit weird. A good rule of thumb is to look at the number _loops_. If there are no loops, you have O(1). If you have 1, you likely have O(n). Now, pay close attention to this next example:
+    names = ["John", "Jacob", "Jingle", "Heimer", "Schmidt"]
+
+    # 1
+    for name in names:
+        print("Hello", name)
+    
+    # 2
+    for_name = names[4]
+    print( for_name )
+
+    # 3
+    i = 0
+    while(i < len(names)):
+        print(names[i])
+
+    # 4
+    for name in names:
+        print(name)
+        break
+
+    # 5
+    letters = [name[0] for name in names]
+    print(letters[0])
+
+    ```
+    <details>
+    <summary>Answers to check your understanding</summary>
+
+        1. O(n) - 1 for loop 
+        2. O(1) - No for loops just a "for_name" variable
+        3. O(n) - while loops are still loops; the loop depends on the length of the list
+        4. O(1) - Tricky! Notice how we break after the first iteration
+        5. O(n) - Sneaky! There's a for loop in the list comprehension.
+
+    </details>
+    <br>
+
+6. That may seem a bit weird. A good rule of thumb is to look at the number _loops_. If there are no loops, you have O(1). If you have 1 loop, you likely have O(n). Now, pay close attention to this next example:
     ```py
     def print_pairs1(numbers):
         for number1 in numbers:
@@ -76,9 +115,8 @@ Students will be able to:
     - Which one is quicker? (Think of a random list [1, 2, 3])
     - What do you think is the Big O time complexity of these 2 functions?
 
-> Teacher note: This is a good time to have students start the extensions to continue practicing O(1), O(n), and O(n^2). Number 8 looks into O(log n)
-
 8. Now that you've seen an example of O(1), O(n), and O(n^2), think about binary search vs linear search. 
+    - What's the difference between linear and binary search?
     - What do you think the BigO for Linear Search is? Why?
     - What do you think the BigO for Binary Search is? Why?
 
@@ -189,4 +227,6 @@ def example12(n):
 
 ## Extra Help & Resources
 
-- 
+- Good [video support on Big O](https://www.youtube.com/watch?v=XMUe3zFhM5c)
+
+- ![Big O chart](./comparison.png)
