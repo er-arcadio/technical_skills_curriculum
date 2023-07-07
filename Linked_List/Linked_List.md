@@ -1,4 +1,4 @@
-# TITLE
+# Linked Lists: Barrel of Monkeys
 
 [![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
 
@@ -56,7 +56,7 @@ _0-2 stretch obj._
 
 ![Visualized Linked List](./img/linked_list.png)
 
-2. What would you assume is the representation of this vocabulary -- node, next, head, and null -- using the chain of monkeys analogy?
+2. What would you assume is the representation of this vocabulary -- node, next, head, and null -- using the chain of monkeys example?
 
 3. Let's look at a couple of examples of code to illustrate this. (NOTE: this is not how linked lists are actually implemented, but still carries the same concept)
 
@@ -72,12 +72,8 @@ _0-2 stretch obj._
 
 4. Notice this dictionary and how the same vocabulary can apply. A key/value pair is a node, the key is the data, the value is the next property, and the head is a separate variable.
 
-5. Open the 
-
-_Concept, code snippet, questions_
-
-## Extensions (optional)
-
-## Close (optional)
+5. Open the `linked_list.py` and complete the challenges with your partner.
 
 ## Extra Help & Resources
+
+- 
