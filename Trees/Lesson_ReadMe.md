@@ -1,4 +1,4 @@
-# Binary Search Trees
+# Trees: Sorted and Unsorted Searching
 
 [![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
 
@@ -6,7 +6,7 @@
 
 ### Goal & Sequence
 
-The goals is to use visuals and dictionaries to conceptualize Trees. The second half of the lesson can be skipped, but is encouraged if your students need more help with object oriented programming.
+The goal is to use visuals and dictionaries to conceptualize Tree data structures.
 
 The concept of a node having 2 or more children nodes is defining of a tree structure, but this lesson is limited to 1-2 children nodes for simplicity. In the lab, the idea of using more than 2 children nodes is explored. 
 
@@ -24,8 +24,7 @@ The optional challenge is good if your students are craving a little bit more, b
 Students will be able to:
 
 - Visually navigate a Tree data structure.
-- Read and write functions that iterate through a tree.
-- 
+- Read and write functions that iterate through a tree written as a dictionary.
 
 ## Launch
 
@@ -37,60 +36,58 @@ When we learned Binary search, we saw the concept of cutting numbers in half to 
 2. This diagram is called a "Tree" and typically is read from the top down. How many nodes do you travel to before arriving at 9? 
 3. What is the least and most nodes you will ever have to travel through?
 
-![Binary Tree of numbers 1-10](./100.png)
-
-- Answer question 2 and 3 above with this diagram of numbers 1-100!
 
 
 ## Lesson Walkthrough
 
-- A tree is just a concept that is usually applied using Object Oriented Programming, but we can use a dictionary to illustrate the same thing.
+- A tree is just a concept that is usually applied using Object Oriented Programming, but we can use a dictionary to illustrate the same thing. Also not all trees are binary trees.
     ```py
     tree = {
-        "value": 5,
+        "value": 7,
         "left": {
-            "value":2,
+            "value":5,
             "left":{
-                "value":1,
+                "value":4,
                 "left":None,
-                "right":None
+                "right":{
+                    "value":11,
+                    "left":None,
+                    "right":None
+                }
             },
             "right":{
                 "value":3,
                 "left":None,
-                "right":{
-                    "value":4,
-                    "left":None,
-                    "right":None
-                }
+                "right":None
             }
         },
         "right": {
             "value":8,
             "left":{
-                "value":6,
-                "left":None,
+                "value":9,
+                "left":{
+                    "value":2,
+                    "left":None,
+                    "right":None
+                },
                 "right":{
-                    "value":7,
+                    "value":13,
                     "left":None,
                     "right":None
                 }
             },
             "right":{
-                "value":9,
+                "value":1,
                 "left":None,
-                "right":{
-                    "value":10,
-                    "left":None,
-                    "right":None
-                }
+                "right":None
             }
         }
     }
     ```
-    - In the code snippet above, how many attributes does `tree` have?
+    - In the code snippet above, what keys are in the `tree` dictionary?
     - What are the values that have none for both their left and right child node?
-    - Which parent nodes have both their left and right child?
+    - Which values have both their left and right child?
+    - Sketch out what the dictionary will look like as a tree diagram
 
 - There are several layers of nesting happening here. Here's an example of working through the tree above. Answer the questions below before running the code in `main.py`.
     ```py
@@ -103,7 +100,6 @@ When we learned Binary search, we saw the concept of cutting numbers in half to 
     print(get_value(tree))
     ```
     - What do you predict to be the output of this code snippet?
-    - What would be a better, more descriptive name for this function?
     - What would happen if `'right'` was changed to `'left'` both times?
 
 ## Extensions
@@ -126,7 +122,7 @@ When trees are made with special rules in mind, complex problems become much eas
 ## Close
 
 - How do trees make searching for values easier? ...more challenging?
-- If a tree used significantly less "_lefts_" than it did "_rights_", how would this change it's benefits? (Bonus) What data structure would this be closer to?
+- If a tree had significantly less "_lefts_" than it did "_rights_", how would this change it's benefits? (Bonus) What data structure would this be closer to?
 - What was the most challenging part of this lesson?
 
 ## Extra Help & Resources
