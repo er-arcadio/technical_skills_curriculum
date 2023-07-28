@@ -47,7 +47,7 @@ You can assume that the streets are 2-way in the above graph. This is called a *
 
 Look at this different part of the city...
 
-![](./assets/crazy_street.png)
+![More complex bidirectional street](./assets/crazy_street.png)
 
 You can probably figure the length of these paths with some time, but maybe you can also realize how this can get very big and complicated very quickly.
 
@@ -55,48 +55,129 @@ You can probably figure the length of these paths with some time, but maybe you 
 
 ## Lesson Walkthrough
 
-One way to represent this map is using a **graph**. A graph is similar to tree, but there is no head or starting node. Here's an example of a directed graph
+- One way to represent this map is using a **graph**. A graph is similar to tree, but there is no head or starting node. Here's an example of a directed graph:
+    ```py
+    street_directed_graph = [
+        [3],
+        [0, 4],
+        [1, 5],
+        [4],
+        [1, 5],
+        []
+    ]
+    # For example: Node-O can get to Node-3
+    ```
+    - What nodes can node-2 get to?
+    - Sketch out the graph on a paper or on an online draw tool
+    - What's one way to get from 2 to 5? (There's 3!)
 
-- Here's an example of a directed graph: 2d array saying what node you pass to
-    - Sketch out the graph on a paper or online draw tool
-    - What's one route to get from A to B?
-    - Can all be visited?
+- This is an example of a bidirectional graph:
+    ```py
+    street_bidirectional_graph = [
+        [1, 3],
+        [0, 2, 4],
+        [1, 5],
+        [0, 4],
+        [1, 3, 5],
+        [2, 4]
+    ]
+    # For example: Node-O can get to Node-3 and 3 back to 0!
+    ```
+    - Sketch this graph out on a paper or online draw tool
+    - What's one route to get from 2 to 5 without repeating nodes?
 
-- Here's an example of a bidirectional graph: 2d array 0s and 1s to show a or no connection
-    - Sketch out the graph on a paper or online draw tool
-    - What's one route to get from A to B?
-    - Can all be visited?
+- Finally, this is a _weighted graph_ in a different format: 
+    ```py
 
-- Here's a weighted bidirectional graph: 2d array 0 and Xs, where X > 0, to show a or no connection
-    - Sketch out the graph on a paper or online draw tool
-    - What's one route to get from A to B?
-    - Whats the fastest?
+    street_weighted_graph = [
+        [0, 0, 0, 2, 0, 0],
+        [6, 0, 0, 0, 3, 0],
+        [0, 2, 0, 0, 0, 9],
+        [0, 0, 0, 0, 1, 0],
+        [0, 3, 0, 0, 0, 2],
+        [0, 0, 0, 0, 0, 0]
+    ]
 
+    # For example: Node-O can get to Node-3 with a cost of 2!
+    # 0 means cannot go to that node
+    ```
+    - Sketch out the graph on a paper or an online draw tool
+    - What's one route to get from 2 to 5? (There are 3)
+    - What's the total cost to get from 2 to 5?
+    - Which route has the cheapest cost?
 
-- Demo of coding can A get to B? (Can be done better with a queue)
-    - If array has destination return true
-    - else if array is empty return false
-    - else - for each element in array
-        - if recursive on element with destination is true return true
-    - return false
+- Let's look at how to code this. What might the base case be?
+    ```py
+    def is_connected(graph, current, destination):
+        #Base Case
 
-## Extensions (optional)
+        #Recursive Case
 
-- Activity: Write code for all these!
-- Can all be visited from every node?
+        return False
 
-## Close (optional)
+    # Can node 0 get to 5?
+    print(is_connected(street_weighted_graph, 0, 5))
+    # Can node 3 get to 2?
+    print(is_connected(street_weighted_graph, 3, 2))
+    ```
+
+    Pseudo Code
+
+    1. (Base Case) If current node's list has the destination node, return True
+    2. Otherwise, for each element in list...
+        - Recurse on the element; If it returns True, return True.
+    3. If you made it this far without returning True, return False
+
+    ```py
+    def is_connected(graph, current, destination):
+        #Base Case
+        if destination in graph[current]:
+            return True
+
+        #Recursive Case
+        else:
+            for next_node in graph[current]:
+                if is_connected(graph, next_node, destination):
+                    return True
+
+        return False
+
+    print(is_connected(street_weighted_graph, 0, 5))
+    print(is_connected(street_weighted_graph, 3, 2))
+    ```
+
+- Turn and talk to your partner and trace this program out loud with them.
+
+## Extensions
+
+1. Using the `street_directed_graph` in the first example, write a function that will check if there's a path from 1 node to another. _Be sure to test your function._
+
+2. Using the `street_bidirectional_graph` in the second example, write a function that will check if there's a path from 1 node to another **without visiting the same node twice**. _Hint: Create a `visited` list that gets updated and passed through the recursion._
+
+3. Using the `street_directed_graph` in the first example, write a function that will print **all** the possible paths from 1 node to another.
+
+4. Using the `street_weighted_graph` in the third example, write a function that will print **all** the possible paths from 1 node to another.
+
+5. Can every node be visited from every node? Use any graph you prefer to build a function that checks if you can get from any node to any other node.
+
+6. Using the `street_weighted_graph` in the third example, write a function that will find all the paths from one node to another, and the total of each path. You output should look as follows.
+
+    ```py
+    weighted_path(street_weighted_graph, 2, 5)
+    #Output###
+    [
+        {'path':[2, 5], 'cost':6},
+        {'path':[2, 1, 4, 5], 'cost':10}
+    ]
+    ####
+
+    weighted_path(street_weighted_graph, 3, 2)
+    #Output###
+    []   # ..because there is no path from 3 to 2
+    ####
+    ```
+
+7. Turn the image below into a weighted graph. Then, test with #4 and #6.
+![Directional image of street](./assets/directional_street.png)
 
 ## Extra Help & Resources
-
-- Dijskras
-- BFS
-- Finding a cycle
-
-- find any path (no requirement: Optional - BFS and DFS-(pre,in,post-order processing))
-
-Skills
-- *Can all be visited?
-- Find any path
-- *find a cycle (maze algorithm)
-- Stretch: Find shortest path (dijskras algorithm, BFS, tricky to intuit but possible)
