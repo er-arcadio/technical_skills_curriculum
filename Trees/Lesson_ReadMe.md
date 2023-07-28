@@ -127,4 +127,4 @@ When trees are made with special rules in mind, complex problems become much eas
 
 ## Extra Help & Resources
 
-- [Red Black Trees](https://www.geeksforgeeks.org/introduction-to-red-black-tree/)
+- [Red Black Trees](https://www.geeksforgeeks.org/introduction-to-red-black-tree/) and a [video](https://www.youtube.com/watch?v=95s3ndZRGbk)
