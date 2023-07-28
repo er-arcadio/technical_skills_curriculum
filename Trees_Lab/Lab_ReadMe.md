@@ -63,3 +63,4 @@ _See the `main.py` for the challenges_
 ## Hints & Resources
 
 - [Notes on OOP](https://www.w3schools.com/python/python_classes.asp)
+- Looking for more? Check out this [video on m-way trees](https://www.youtube.com/watch?v=6mbAg7Y906U).
