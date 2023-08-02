@@ -51,7 +51,7 @@ Talk through your strategy using this (simplified) Wikipedia Link Graph. Start a
 Here are the steps to the Breadth First Search algorithm:
 1. Pick a starting node and put it in the queue
 2. Until the queue is empty...
-    - Pop the next node from the queue, if it's the destination node, you're done!
+    - Pop and print the next node from the queue, if it's the destination node, you're done!
     - Otherwise, add the node's children to the queue if they haven't already been added.
 
 _Use the image below to test it out:_

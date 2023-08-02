@@ -1,29 +1,28 @@
-wikipedia = [
-    [1, 2],
-    [3],
-    [1, 3, 4, 7],
-    [5, 6],
-    [1, 7],
-    [0],
-    [],
-    [5]
-]
+from ignore import root
 
+# class Page(object):
+#   def __init__(self, x):
+#     self.value = x
+#     self.links = []
+
+print(root.value,root.links)
+
+# NOTE: If you're having trouble conceptualizing the flow of the graph, you can either peak at the `wikipedia` variable in `ignore.py` or us the graph in the README
 
 
 # BFS
 
-def BFS(graph, start, end):
+def BFS(start_node, destination_value):
     pass
 
-BFS(wikipedia, 0, 6)
+BFS(root, 'Z')
 
 
 
 
 # DFS
 
-def DFS(graph, start, end):
+def DFS(start_node, destination_value):
     pass
 
-DFS(wikipedia, 0, 6)
+DFS(root, 'Z')
