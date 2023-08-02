@@ -116,5 +116,5 @@ A weighted graph is a graph whose edges have a "cost" of some kind.
 ## Hints & Resources
 
 - Hitting every node (traversing) through a graph
-- A video on looking for cycles
+- A video on [looking for cycles](https://www.youtube.com/watch?v=L0DcePeWHnM). [Another good video](https://www.youtube.com/watch?v=0dJmTuMrUZM).
 - [Spicy] Finding the shortest path (Dijsktra's Algorithm)
