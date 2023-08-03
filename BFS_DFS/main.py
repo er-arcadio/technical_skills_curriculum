@@ -1,4 +1,4 @@
-from ignore import root
+from ignore import root, wikipedia
 
 # class Page(object):
 #   def __init__(self, x):
@@ -8,6 +8,7 @@ from ignore import root
 print(root.value,root.links)
 
 # NOTE: If you're having trouble conceptualizing the flow of the graph, you can either peak at the `wikipedia` variable in `ignore.py` or us the graph in the README
+# NOTE: For a less spicy experience, use the `wikipedia` variable instead of root (Starting node: 'A')
 
 
 # BFS
