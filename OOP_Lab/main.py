@@ -1,0 +1,2 @@
+from bursars import Course
+
