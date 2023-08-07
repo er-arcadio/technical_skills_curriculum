@@ -42,9 +42,10 @@ Students will be able to:
     for number in numbers:
         print(number, "is in the list.")
     ```
-2. _How many lines will be run in the code above?_ 
+    - What's the maximum number of times any one line will be run? 
+    - What if there were 10 numbers? N numbers?
 
-3. Notice how your answer to number 2 will vary depending on the length of `numbers`. Because of this, we can say that this code has a time complexity **order of n**, **O(n)** for short, where n is the length of the list or the number of times the for loop will cycle. 
+3. The maximum amount of times any line will run is N. Therefore, the code has a time complexity **order of n**, **O(n)** for short. 
 
 4. Let's look at another:
     ```py
@@ -53,12 +54,11 @@ Students will be able to:
     fav_num = nums[0]
     print("My favorite number is", fav_num)
     ```
+    - What's the maximum number of times any one line will be run? 
+    - What if there were 10 numbers? N numbers?
 
-5. There are 3 lines of code that will be run, and notice how no matter how big the list is, 3 lines is all that will run. Because this number is consistently 3 and not dependent on the list length, this is an **order of 1** or **O(1)** for short.
+5. Need more practice? Check out these examples and see if you can determine whether they are O(1) or O(n)
     ```py
-    # Need more practice?
-    # Check out these examples and see if you can determine whether they are O(1) or O(n)
-
     names = ["John", "Jacob", "Jingle", "Heimer", "Schmidt"]
 
     # 1
@@ -96,7 +96,7 @@ Students will be able to:
     </details>
     <br>
 
-6. That may seem a bit weird. A good rule of thumb is to look at the number _loops_. If there are no loops, you have O(1). If you have 1 loop, you likely have O(n). Now, pay close attention to this next example:
+6. That may seem a bit weird. A good rule of thumb is to look at the number of _loops_. If there are no loops, you have O(1). If you have 1 loop, you likely have O(n). Now, pay close attention to this next example:
     ```py
     def print_pairs1(numbers):
         for number1 in numbers:
@@ -109,16 +109,41 @@ Students will be able to:
         for number2 in numbers:
             print(number2) 
     ```
-
-7. Answer the following questions with your partner:
     - What are the functions doing?
     - Which one is quicker? (Think of a random list [1, 2, 3])
     - What do you think is the Big O time complexity of these 2 functions?
 
-8. Now that you've seen an example of O(1), O(n), and O(n^2), think about binary search vs linear search. 
+8. (Spicy) Now that you've seen an example of O(1), O(n), and O(n^2), think about **binary search** vs **linear search**:
     - What's the difference between linear and binary search?
     - What do you think the BigO for Linear Search is? Why?
     - What do you think the BigO for Binary Search is? Why?
+
+    Code for context:
+    ```py
+    def linear(n, data):
+        for idx, value in enumerate(data):
+            if n == value:
+                return idx
+        return -1
+
+    def binary(n, data):
+        left = 0
+        right = len(data)
+        
+        while left <= right:
+            mid = right // 2
+
+            if n < data[mid]:
+                right = mid - 1
+            elif n > data[mid]:
+                left = mid + 1
+            else: # ==
+                return mid
+            
+        return -1
+    ```
+
+9. (Bonus) Go back to your code for Sorting algorithms, and determine the BigO of each.
 
 ## Extensions
 
@@ -224,6 +249,8 @@ def example12(n):
     else:
         example12(n-1)
 ```
+
+- Go back to your code for Sorting Algorithms, and determine the BigO of each.
 
 ## Extra Help & Resources
 
