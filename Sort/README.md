@@ -1,7 +1,5 @@
 # Sorting Algorithms
 
-[![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
-
 ## Teacher Notes
 
 ### Goal & Sequence
@@ -37,67 +35,47 @@ Students will be able to:
 
 ## Launch
 
-Start up the "Sort Cards" game and demo how it works -- the goal is to sort the cards in order from least to greatest. Have the students just play for now, and allow them to get familiar with how the app works.
+Open up the ["Sort the Cards" game app](https://sortinggame.emmanuelrodri23.repl.co/). The goal is to sort the cards in order from least to greatest. Play once or twice, and get familiar with how the app works.
 
-Once most of them have finished, ask if any of them had a repeatable strategy that they can explain to the class. Disregard vocabulary for now and commend each volunteer.
-
-Have them play again, this time focussing on a specific repeatable strategy. Be sure they ignore the counts (observations, cycles, etc.) for now.
-
-Finish off by giving several students the time and space to clearly articulate the strategy they came up with. Consider demoing a preview on your screen or allowing them to share theirs with the class. 
+- What are some things you notice about how the game works?
+- What's a repeatable strategy to get these sorted? Can you show and 
 
 ## Lesson Walkthrough
 
-> Note: The following lesson uses Insertion Sort and Selection Sort. However, Bubble, Selection, or Insertion Sort can each be interchanged at any point. 
+> Note: The following lesson uses Insertion Sort and Selection Sort. However, Bubble, Selection, or Insertion Sort can each be interchanged at any point so long as the  
 
 **Unplugged / No Code**
-- Use a student's algorithm, or the insertion sort algorithm to demo how students should now articulate their strategy on a document, paper, or other means. For example:
+- What we talked through in the Launch was an **algorithm**, a sorting algorithm. Here are the steps (pseudo code) to the **Insertion Sort** algorithm.  
     ```markdown
-    ** Manny's Sort ** (really just Insertion Sort)
+    ** Insertion Sort **
 
     1. Look at the first 2 numbers. If they're out of order, swap them.
-    2. For every other number if it's the greatest so far, skip it. Otherwise, put it in storage.
-    3. Shift numbers on the left over until you reach a number that is smaller than the storage number.
-    4. Finally, put the storage number back in the new empty space.
+    2. For the next number if it's the greatest so far, skip it.
+    3. Otherwise...
+        a. put it in storage.
+        b. shift the numbers on the left over to the right until you reach a number that is smaller than the storage number.
+        b. Finally, put the storage number back in the new empty space.
+    4. Repeat steps 2 and 3 until you've done the last number.
     ```
-    _Note: the goal is not to have it align to code, but to think algorithmically or in clear repeatable steps._
-
-- After demoing this algorithm, ask students to now notice the 4 counts, observations, cycles, moves, and storage, and predict what they're counting. 
-    - Observations: number of times your are looking at a card
-    - Moves: moving a card from one spot to another
-    - Storage: number of empty slots available
-    - Cycles: (tricky) max number of times you've observed the same number.
-
-- Have students try again to sort the cards while keeping these counts low. They should focus on creating a repeatable strategy and articulating it to their partner.
-
-- When students return, allow them to share their algorithms with you and the class navigating as you drive to demo for all to see. 
+- Try the steps above on your own using the app, and answer the following questions:
+    - What are the 4 counters counting? (ie. observations, cycles, moves, and storage)
+    - How might you try to improve this algorithm? 
 
 **Incorporating Code**
 
-- Now, flip the script and have another student drive as you navigate them through Selection Sort. For Selection Sort, look for the smallest number and place it in the first slot. Then, look for the next smallest and put it in the second slot, and so on until the list is sorted. _You can have them share their screen if on virtual or come up to the front of the class._ _NOTE: this is not going to be a low scoring algorithm, but it is a guaranteed simpler one to code out._
-
-- Ask students to try to code this algorithm in Python. Consider pairing off the students that are ready to go, and demoing the steps once more using the app, for students who would like to see it again. 
-
-- Once students return, have a couple of them explain their code to the class. Here's one way to do it:
-    ```python
-    def selection_sort(sample_list):
-        sorted_list = []
-
-        for i in range( len(sample_list) ):
-            smallest = sample_list[0]
-            for element in sample_list:
-                if element < smallest:
-                    smallest = element
-            sorted_list.append( sample_list.pop(smallest) )
-        
-        return sorted_list
-
-    print(selection_sort([5, 2, 1, 3, 4]))
+- Now, let's look at the **Selection Sort** algorithm. 
     ```
+    1. Look for the smallest number.
+    2. Swap it with the card in the 1st slot.
+    3. Repeat steps 1 and 2 until it's sorted, but replace '1st' with the next one (2nd, then 3rd, etc.)
+    ```
+    _NOTE: this is not going to be a low scoring algorithm, but it is a guaranteed simpler one to code out._
 
-## Extensions
+- Try this algorithm out with the app.
+    - In what ways is this algorithm better than Insertion sort?
+    - In what ways is it worse?
 
-- Try Selection sort without creating a new list!
-
+- Now, try coding these steps in a function.
     HINT: You can use the following piece of code to swap two variables' values:
 
     ```py
@@ -108,7 +86,11 @@ Finish off by giving several students the time and space to clearly articulate t
     # num2 = 4
     ```
 
-- Check out the algorithm for [Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA), and try to code it!  
+## Extensions
+
+- Try Selection sort without creating a new list!
+    
+- Check out the algorithm for [Insertion Sort](https://www.youtube.com/watch?v=JU767SDMDvA), and try to code it!
 
 ## Extra Help & Resources
 
