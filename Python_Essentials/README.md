@@ -26,7 +26,7 @@ Have students self-sort into three groups according to how they view the lab:
 2. **(I mostly know python)** Ready to work with a partner as a driver 
 3. **(I'm not too confident with python)** Ready to go over the concepts first with a teacher.
 
-[These slides](./Python%20Lightning%20Intro.pdf) are a good resource and/or alternative to the walkthrough. [This link](https://drive.google.com/file/d/1gsuGKeb-Q8wp7tZafoEzIgQybpQj_UjO/view) will take you to an online version
+[These slides](./Python%20Lightning%20Intro.pdf) are a good resource and/or alternative to the walkthrough. [This link](https://drive.google.com/file/d/1gsuGKeb-Q8wp7tZafoEzIgQybpQj_UjO/view) will take you to an online version. _Note: Be sure to be brief and have students do hands on work as quickly as possible!_
 
 
 ## <a href="lesson-walkthrough"></a>Lesson Walkthrough

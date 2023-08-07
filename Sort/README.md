@@ -40,9 +40,7 @@ Open up the ["Sort the Cards" game app](https://sortinggame.emmanuelrodri23.repl
 - What are some things you notice about how the game works?
 - What's a repeatable strategy to get these sorted? Can you show and 
 
-## Lesson Walkthrough
-
-> Note: The following lesson uses Insertion Sort and Selection Sort. However, Bubble, Selection, or Insertion Sort can each be interchanged at any point so long as the  
+## Lesson Walkthrough 
 
 **Unplugged / No Code**
 - What we talked through in the Launch was an **algorithm**, a sorting algorithm. Here are the steps (pseudo code) to the **Insertion Sort** algorithm.  
