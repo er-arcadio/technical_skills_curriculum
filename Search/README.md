@@ -1,7 +1,5 @@
 # Linear vs Binary Search
 
-[![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
-
 ## Launch
 
 1. Open up the ["Design a Search" app](https://jolson615.github.io/createasearchalgorithm/index.html).

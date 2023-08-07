@@ -14,18 +14,20 @@
 This lab is a chance to practice the two concepts, binary search and recursion, in combination.
 
 **Binary Search** - Split the data in half. Is the value higher or lower? Get rid of the wrong side. Repeat until you find the data point.
-**Recursion** - Function does something with a piece of data. If it's too big, **function calls itself** again with a smaller form of the data.
+**Recursion** - Function does something with a piece of data. If it's too big, _function calls itself_ again with a smaller form of the data.
 
 ## The Lab
 
-1. Open up the `recursiveSearch.py`. There, you will see a sorted list (`data`) of random values. You're also given a `key` which is a number that may or may not be in that list. Run the code a couple of times and see for your self.
+0. Open and run the `recursiveSearch.py`. In the code you'll see:
+ - `data` - a list of 50 random unique numbers between 1 and 100.
+ - `key` - the number to look for that may or may not be in data.
 
-2. Write a function that returns the index of where 27, the key, is located or -1 if the value isn't in the list. (Don't worry about efficiency for now)
+2. Write a function that returns the index of where the key is, or -1 if the value isn't in the list. (Don't worry about efficiency right now)
 
-3. Now, use binary search to write a new function that does the same thing. It may help to say the steps out loud to your partner or write them down in pseudo-code before coding out the solution. (Note: Skip this step if you did it this way in #3)
+3. Now if you haven't already, use binary search to write a new function that does the same thing. _HINT: It may help to say the steps out loud to your partner or write them down in pseudo-code before coding out the solution._ 
 
-4. Finally, create a third function that uses binary search to look for the key, but this time it should use recursion instead of a loop. Here's the pseudo-code if you need it:
-    - If the (middle) number is equal to the key, return the number's index.
+4. If you haven't used recursion already, create a new function that uses recursion to binary search instead of a loop. Here's the pseudo-code if you need it:
+    - [base case] If the (middle) number is equal to the key, return the number's index.
     - If the key is greater, run this function again with the right half of the list.
     - If the key is lesser, run this function again with the left half of the list.
 
@@ -33,7 +35,7 @@ This lab is a chance to practice the two concepts, binary search and recursion, 
 
 ## Extensions
 
-For each of these problems, code the solution **without** recursion before attempting it **with** recursion. The starter code can be found in the `extension.py`.
+For each of these challenges, code the solution **without** recursion before attempting it **with** recursion. The starter code can be found in the `extensions.py`.
 
 **Mild**
 
