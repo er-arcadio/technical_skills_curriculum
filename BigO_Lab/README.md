@@ -11,8 +11,6 @@
 
 ## Intro
 
-
-
 ## The Lab
 
 > Teacher note: if you went through the Big O lesson with students you can skip to "The Big O of Different Data Structures"
@@ -30,10 +28,12 @@
 
     sum_of(10)
     ```
-    - How many lines of code will likely be run?
+    - What is the most number of times any one line will be run?
     - As n grows, how will the number of run lines change?
 
-2. If the number of lines run is linearly dependent on the data, we can say it has an order of n, or _O(n)_ for short. Take a look at this next piece of code:
+2. If the number of lines run is linearly dependent on the data, we can say it has an order of n, or _O(n)_ for short.
+
+3. Take a look at this next piece of code:
     ```py
     def sum_of(n):
         total_sum = n * (n + 1)
@@ -42,12 +42,12 @@
 
     sum_of(20)
     ```
-    - How many lines of code will likely be run?
+    - What is the most number of times any one line will be run?
     - As n grows, how will the number of run lines change?
 
-3. If the number of lines run is consistent or independent of the data inputted, it has an order of 1, or _O(1)_. 
+4. If the number of lines run is consistent or independent of the data inputted, it has an order of 1, or _O(1)_. 
 
-4. What would your intuition tell you about the following code?
+5. What would your intuition tell you about the following code?
     ```py
     def get_pairs(students):
         pairs = []
@@ -60,10 +60,10 @@
     students = ["Rafael", "Steven", "Manny", "Jeff"]
     print(get_pairs(students))
     ```
-    - How many lines of code will likely be run?
+    - What is the most number of times any one line will be run?
     - As n grows, how will the number of run lines change?
 
-5. Notice these 2 ways to code the same search function:
+6. Notice these 2 ways to code the same search function:
     ```py
     def findA(n, data):
         for idx, value in enumerate(data):
@@ -126,15 +126,18 @@ Let's think through some problems and how different solutions can affect the tim
 
 ## Extensions
 
-1. Given a list of numbers. How would you find the indexes of the 2 numbers that add up to the largest sum? Take a minute to yourself to think about 2 different solutions. Then, share them with your partner and compare.
+Given a list of numbers. How would you find the indexes of the 2 numbers that add up to the largest sum?
 
-2. In the `maxsum.py`, code the solutions that you and your partner came up with in number 1. Then as a comment, label each with their time complexity.
+1. _[Algorithmic Thinking]_  - Take a minute to yourself to think about 2 different solutions to the prompt. Then, share them with your partner and compare.
 
-3. [Spicy] I can think of 5 different ways to code number 1. Below are the time complexities. Come up with all 5 ways (or potentially more)!
-    - O(n) - (2 different O(n) ways)
-    - O(n * log n)
-    - O(1) - Hint: there's an exeption here
-    - O(n^2)
+2. _[Code & BigO]_  - In the `maxsum.py`, code the solutions that you and your partner came up with. Then as a comment, label each with their BigO time complexity.
+
+3. [Spicy] I can think of 5 different ways to code the prompt. Below are the time complexities I found. Fill yours into the number below, then come up with at least 1-2 more ways to solve the prompt. Repeat steps 1 and 2 with them.
+    1. O(n)
+    2. O(n) - _There's two different O(n) ways_
+    3. O(n * log n)
+    4. O(1) - _Hint: there's an exception here_
+    5. O(n^2)
 
 ## Hints & Resources
 
