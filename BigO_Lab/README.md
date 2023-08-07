@@ -132,7 +132,7 @@ Given a list of numbers. How would you find the indexes of the 2 numbers that ad
 
 2. _[Code & BigO]_  - In the `maxsum.py`, code the solutions that you and your partner came up with. Then as a comment, label each with their BigO time complexity.
 
-3. [Spicy] I can think of 5 different ways to code the prompt. Below are the time complexities I found. Fill yours into the number below, then come up with at least 1-2 more ways to solve the prompt. Repeat steps 1 and 2 with them.
+3. [Spicy] I can think of 5 different ways to code the prompt. Below are the time complexities I found. Fill yours into the slot below, then come up with at least 2 more ways to solve the prompt. Repeat steps 1 and 2 with them.
     1. O(n)
     2. O(n) - _There's two different O(n) ways_
     3. O(n * log n)
