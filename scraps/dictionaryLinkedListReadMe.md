@@ -19,7 +19,7 @@ _Note: Linked lists are typically done with Object Oriented Programming. OOP has
 
 **Pre-Lab Walkthrough**
 
-- This is the structure of the data you will be using in the challenges later on. For now, let's see some examples on how to work with this linked list. 
+- This is an example dictionary view of the data you will be using in the challenges later on. A dictionary is a good way to visualize a linked list since we cant see the whole structure at once using OOP.
 
     ```py
     first_train = "33"
@@ -63,6 +63,6 @@ _Note: Linked lists are typically done with Object Oriented Programming. OOP has
 
 ## Extensions
 
-_See `train_cars.py` for the challenges_
+_See `main.py` for the challenges_
 
 ## Hints & Resources
