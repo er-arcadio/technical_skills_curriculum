@@ -1,7 +1,5 @@
 # Stacks and Queues
 
-[![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
-
 ## Teacher Notes
 
 ### Goal & Sequence
@@ -31,16 +29,16 @@ Students will be able to:
 Some card games like [the one in this video (Egyptian Ratscrew)](https://youtu.be/7h99zClpN0M?t=13) have player draw from the top of their deck, but add cards to the bottom. In this case, your deck of cards is a **Queue**. Cards move up the queue until they are drawn.
 - What are some other examples of a **queue** in real life?
 
-Other games like _Gin Rummy_ have a discard pile. On your turn when you draw, you can pull from the top of the discard pile. In this case, the discard pile is a **Stack**. Only the top card of the stack can be drawn.
+Other games like _Gin Rummy_ have a discard pile. On your turn when you draw, you can pull from the top of the discard pile. Then, you discard by adding cards to the top of the discard pile. In this case, the discard pile is a **Stack**. Only the top card of the stack can be drawn.
 - What are some other examples of a **stack** in real life?
 
 ## Lesson Walkthrough
 
 **The Queue**
 
-- At the Liberty Science Center in NJ, there's an activity called the Touch Tunnel. It's an 80 foot long tunnel that is so pitch black dark you have to "touch" the walls and crawl your way through. 
+At the Liberty Science Center in NJ, there's an activity called the Touch Tunnel. It's an 80 foot long tunnel that is so pitch black dark you have to "touch" the walls and crawl your way through. 
 
-- Before you enter, you sign your name in the kiosk, and when you leave the sensors log an exit. This way, we always know if someone is still left inside. Below is the log from a class field trip.
+- Before you enter, you sign your name in the kiosk, and when you leave, the sensors log an exit. This way, we always know if someone is still left inside. Below is the log from a class field trip.
 
     ```
     Log of activity:
@@ -66,7 +64,7 @@ Other games like _Gin Rummy_ have a discard pile. On your turn when you draw, yo
 
 **The Stack**
 
-- The example above follows the rule _First In, First Out_ (FIFO). The first person in the tunnel will be the first to leave. But watch how the same time log can be used for the rule _Last In, First Out_ (LIFO).
+The example above follows the rule _First In, First Out_ (FIFO). The first person in the tunnel will be the first to leave. But watch how the same time log can be used for the rule _Last In, First Out_ (LIFO).
 - Below is a time log of when tests were submitted and graded. When they're done, students place there test in a pile, in a shallow basket on the teacher's desk, and when the teacher is ready, they grab the top most test to grade.
     ```
     Log of activity:

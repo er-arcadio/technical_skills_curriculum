@@ -1,31 +1,25 @@
 # Linked Lists: Barrel of Monkeys
 
-[![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
-
 ## Teacher Notes
 
 ### Goal & Sequence
 
-...
+This lesson is a chance for students to get familiar with linked lists without getting in the weeds of coding. It is designed to be mostly a discussion and a thought activity.
+
+Later on, a dictionary is used to conceptualize a linked list. Though this is not the way it is typically coded, we find this is helpful for students to grasp the concept of a chain or linked list.
 
 - [Launch](#launch)
 - [Lesson Walkthrough](#lesson-walkthrough)
 - [Extensions](#extensions)
 - [Close](#close)
 
-### Teaching Tips (optional)
-
-
-
-### Representation (optional)
-
 ### Learning Objectives
 
 Students will be able to:
 
-_with advanced lense_
-_3-5 objectives_
-_0-2 stretch obj._
+- Compare and contrast linked lists with Python lists (arrays)
+- Discuss algorithms for removing items from linked lists and reversing a linked list
+- [Stretch] Experiment with linked-list-like code using a dictionary mapping.
 
 ## Launch
 
@@ -75,5 +69,3 @@ _0-2 stretch obj._
 5. Open the `linked_list.py` and complete the challenges with your partner.
 
 ## Extra Help & Resources
-
-- 

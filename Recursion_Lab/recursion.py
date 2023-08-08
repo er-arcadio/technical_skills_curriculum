@@ -36,7 +36,7 @@
 
 
 # Spicy
-# NOTE: These are much easier as recursion than as a loop. Feel free to skip non-recursive version.
+# NOTE: These are spicy! But, they going straight to recursion may be easier than doing a loop. Feel free to skip the non-recursive version.
 
 # 7. A few chess players have made it to the finals fighting for 1st - 4th place.
 # Write a function that will return all the ways the players can get placed.
