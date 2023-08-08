@@ -1,4 +1,4 @@
-# Linked Lists: Train Cars (No OOP)
+# Linked Lists: Train Cars
 
 [![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
 
@@ -13,7 +13,7 @@
 
 The train engineers have a chain of train cars that are represented here in code as a linked list. Complete the following challenges by creating functions that manipulate the train car linked list.
 
-_Note: Linked lists are typically done with Object Oriented Programming. OOP has been omitted here to eliminate that prerequisite, but the concepts and techniques remain the same._
+_Note: Linked lists are typically done with Object Oriented Programming. The default has been saved as such. Use `data.py` instead of `oop_data.py` if you'd like to learn linked lists without OOP._
 
 ## The Lab
 
