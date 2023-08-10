@@ -11,7 +11,7 @@
 
 ## Intro
 
-If you ever have the positive and negative of a charge touch, you can start a fire. The flow of energy, as in a power plant, should never loop back onto itself. 
+If you ever have the positive and negative of an electrical charge touch, you can create an endless loop, starting a fire! The flow of energy, as in a power plant, should never loop back onto itself. 
 
 In this lab, you're given the plans of several power grids. There are a couple of rules we should be looking for to ensure a healthy grid.
 
@@ -21,7 +21,7 @@ In this lab, you're given the plans of several power grids. There are a couple o
 Some additional concerns are:
 
 3. Can we find the path from the main power source to any other power plant?
-4. Stretch: Is there an optimal cost of power transfer?
+4. [Stretch] Is there an optimal cost of power transfer?
 
 ## The Lab
 
@@ -38,7 +38,7 @@ power_grid = [
 
 # Powerplant-0 sends power to 1
 # Who does Powerplant-3 send power to?
-# Which plant doesn't receive any power? (This is the main plant)
+# Which plant doesn't receive any power? (This is the main power plant)
 ```
 
 1. Sketch a directed graph to see how the plants are powering each other in the grid.
@@ -99,7 +99,7 @@ _See `main.py` for the extensions_
 
 A weighted graph is a graph whose edges have a "cost" of some kind.
 ![](./grid5.png)
-- It costs 3 units to get from node-0 to node-1. In this case, these nodes represent power plants, and the cost on the edges represent the money in dollars to send 10 kilowatts of power (It costs $3 to send 10kw from plant-0 to plant-1).
+- It costs 3 units to get from node-0 to node-1. In this case, these nodes represent power plants, and the cost on the edges represent the money in dollars to send 10 kilowatts of power (eg. It costs $3 to send 10kw from plant-0 to plant-1).
 - This is how the graph above will be represented in python code:
     ```py
     weighted_power_grid = [

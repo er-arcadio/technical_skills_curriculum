@@ -1,12 +1,10 @@
 # Trees: Sorted and Unsorted Searching
 
-[![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
-
 ## Teacher Notes
 
 ### Goal & Sequence
 
-The goal is to use visuals and dictionaries to conceptualize Tree data structures.
+The goal is to use dictionaries and png screenshots of graphs to conceptualize the Tree data structures.
 
 The concept of a node having 2 or more children nodes is defining of a tree structure, but this lesson is limited to 1-2 children nodes for simplicity. In the lab, the idea of using more than 2 children nodes is explored. 
 
@@ -17,7 +15,7 @@ The concept of a node having 2 or more children nodes is defining of a tree stru
 
 ### Teaching Tips
 
-The optional challenge is good if your students are craving a little bit more, but can put students who are struggling to understand in the panic zone. If this is a worry with your students, consider switching to the lab instead.
+The optional challenge in the extensions is good if your students are craving a little bit more. However, it can put students who are struggling to understand in the panic zone. If this is a worry with your students, consider at that point switching to the lab instead.
 
 ### Learning Objectives
 
@@ -28,13 +26,13 @@ Students will be able to:
 
 ## Launch
 
-When we learned Binary search, we saw the concept of cutting numbers in half to more quickly find the number being searched for. Think of the higher lower game. Now, look at this visual for guessing a number between 1 and 10.
+When we learned Binary search, we saw the concept of cutting numbers in half to more quickly to find the number being searched for. Think of the higher lower game. Now, look at this visual for guessing a number between 1 and 10. Each level is a guess. Left indicates lower, and right higher.
 
 ![Binary Tree of numbers 1-10](./10.png)
 
 1. What is common between every circle, "node", in this diagram?
-2. This diagram is called a "Tree" and typically is read from the top down. How many nodes do you travel to before arriving at 9? 
-3. What is the least and most nodes you will ever have to travel through?
+2. This diagram is called a "Tree" and typically is read from the top down. What 2 nodes are the same distance away from each other?
+3. What is the fewest and most nodes you will ever have to travel through?
 
 
 
@@ -84,7 +82,7 @@ When we learned Binary search, we saw the concept of cutting numbers in half to 
         }
     }
     ```
-    - In the code snippet above, what keys are in the `tree` dictionary?
+    - In the code snippet above, what keys are in the outermost `tree` dictionary and what are their data types?
     - What are the values that have none for both their left and right child node?
     - Which values have both their left and right child?
     - Sketch out what the dictionary will look like as a tree diagram
@@ -114,10 +112,10 @@ When trees are made with special rules in mind, complex problems become much eas
 
 ![Binary Tree of numbers 1-10](./redblacktree.png)
 
-- A leaf node is any circle that has no children. How many black nodes are passed through to get to each leaf node?
-- Where would the number 16 go? What color would it be?
+- A leaf node is any circle that has no children. How many black nodes are visited to get to each leaf node?
+- Where might the number 16 go? Why? What color would it be? Why?
 - What other patterns do you notice about this particular red/ black tree?
-- [Spicy] If no parent and child node can both be red, where would 9 have to go and what colors would have to change? Use a pencil and paper or digital drawing app to illustrate.
+- [Spicy] If two back to back nodes can't be red, where would 9 have to go and what colors would have to change? Use a pencil and paper or digital drawing app to illustrate. _TIP: look up a video on red-black trees to get more insight to the patterns here._
 
 ## Close
 
