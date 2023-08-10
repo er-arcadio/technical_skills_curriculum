@@ -1,12 +1,10 @@
-# TITLE
-
-[![Run on Repl.it](https://repl.it/badge/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)](https://repl.it/github/upperlinecode/<INSERT_GITHUB_EXTENSION>)
+# Intro to Graphs
 
 ## Teacher Notes
 
 ### Goal & Sequence
 
-...
+This 
 
 - [Launch](#launch)
 - [Lesson Walkthrough](#lesson-walkthrough)
@@ -32,15 +30,20 @@ Below is an aerial view section of a city. Each corner will be called a **node**
 
 ![Image of a 2-way street](./assets/simple_street.png)
 
-1. How far is node B from node C? _Use **up**, **down**, **left**, and **right** to explain how you go your solution._
+1. How far is node B from node C? _Use **up**, **down**, **left**, and **right** to explain how you got your solution._
 2. How far is node A from node C?
 
-You can assume that the streets are 2-way in the above graph. This is called a **bidirectional graph**. What if some of the streets were one way? This would be called **directed graph**.
+You can assume that the streets are 2-way in the above graph. This is called a **bidirectional graph**. What if some of the streets were one way? This would be called a **directed graph**.
 
 ![Directional image of street](./assets/directional_street.png)
 
 > Optional: Turn and talk and find all 6 distances with you partner
-> 1. A=>B, 2. B=>A, 3. A=>C, 4. C=>A, 5. B=>C, 6. C=>B
+> 1. A=>B
+> 2. B=>A
+> 3. A=>C
+> 4. C=>A
+> 5. B=>C
+> 6. C=>B
 
 1. How far is A to B now?
 2. What about B to A?
@@ -51,7 +54,7 @@ Look at this different part of the city...
 
 You can probably figure the length of these paths with some time, but maybe you can also realize how this can get very big and complicated very quickly.
 
-- Would you use a linked list or Tree to represent this? What would be the head?
+- Would you use a Linked List or Tree to represent this? What would be the head?
 
 ## Lesson Walkthrough
 
@@ -66,8 +69,10 @@ You can probably figure the length of these paths with some time, but maybe you 
         []
     ]
     # For example: Node-O can get to Node-3
+    # Also: Node-1 can get to Node-0 and Node-4
+    # NOTE: there are no weights yet!
     ```
-    - What nodes can node-2 get to?
+    - What nodes can Node-4 get to?
     - Sketch out the graph on a paper or on an online draw tool
     - What's one way to get from 2 to 5? (There's 3!)
 
@@ -106,7 +111,7 @@ You can probably figure the length of these paths with some time, but maybe you 
     - What's the total cost to get from 2 to 5?
     - Which route has the cheapest cost?
 
-- Let's look at how to code this. What might the base case be?
+- Let's look at how to code this. "Can we get from A to B?" What might the base case be?
     ```py
     def is_connected(graph, current, destination):
         #Base Case
@@ -121,7 +126,7 @@ You can probably figure the length of these paths with some time, but maybe you 
     print(is_connected(street_weighted_graph, 3, 2))
     ```
 
-    Pseudo Code
+    **Pseudo Code** for `is_connected()`
 
     1. (Base Case) If current node's list has the destination node, return True
     2. Otherwise, for each element in list...
@@ -148,7 +153,7 @@ You can probably figure the length of these paths with some time, but maybe you 
 
 - Turn and talk to your partner and trace this program out loud with them.
 
-## Extensions
+## Extensions (Optional)
 
 1. Using the `street_directed_graph` in the first example, write a function that will check if there's a path from 1 node to another. _Be sure to test your function._
 
